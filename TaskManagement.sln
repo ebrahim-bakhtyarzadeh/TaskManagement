@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Application", "src\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.WebApi", "src\TaskManagement.WebApi\TaskManagement.WebApi.csproj", "{D0DBA369-8383-4977-9407-E2C24AF1A724}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.EndPoint", "src\Common\Common.EndPoint\Common.EndPoint.csproj", "{211EEF9A-BC3A-4165-9AE8-7225FC2E1194}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D0DBA369-8383-4977-9407-E2C24AF1A724}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0DBA369-8383-4977-9407-E2C24AF1A724}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0DBA369-8383-4977-9407-E2C24AF1A724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{211EEF9A-BC3A-4165-9AE8-7225FC2E1194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211EEF9A-BC3A-4165-9AE8-7225FC2E1194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211EEF9A-BC3A-4165-9AE8-7225FC2E1194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211EEF9A-BC3A-4165-9AE8-7225FC2E1194}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{CE3D9AD0-9C61-4F8E-BDC2-511EEAABC1BC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{1A7CC3B9-8938-4B35-9813-A5B32AE1CF33} = {9837CE7A-76EF-4BF8-89B7-405A4DF93A75}
 		{D0DBA369-8383-4977-9407-E2C24AF1A724} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{211EEF9A-BC3A-4165-9AE8-7225FC2E1194} = {9837CE7A-76EF-4BF8-89B7-405A4DF93A75}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4A090449-8575-4A70-A9C7-7F113C761534}
