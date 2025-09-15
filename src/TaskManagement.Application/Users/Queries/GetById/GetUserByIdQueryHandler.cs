@@ -7,9 +7,12 @@ namespace TaskManagement.Application.Users.Queries.GetById
 {
     public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, QueryResult<UserDto>>
     {
-        private readonly IUserService _userService;
+        private readonly IUserQueryService _userService;
 
-
+        public GetUserByIdQueryHandler(IUserQueryService userService)
+        {
+            _userService = userService;
+        }
         public async Task<QueryResult<UserDto>> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
         {
             var user = await _userService.GetUserById(request.userId, cancellationToken);

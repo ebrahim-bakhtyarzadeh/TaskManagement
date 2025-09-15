@@ -1,4 +1,4 @@
-﻿using Application.Common.Exceptions;
+﻿using Common.Application.Exceptions;
 using FluentValidation;
 using MediatR;
 

@@ -1,25 +1,19 @@
-﻿using Application.Common.Result;
+﻿using Common.Application.Result;
 using Common.EndPoint.API.Result;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Common.EndPoint.API
 {
     [ApiController]
     [Route("[controller]")]
-    public class ApiController: ControllerBase
+    public class ApiController : ControllerBase
     {
-        protected ApiResult CommandResult(UseCaseResult result)
+        protected ApiResult CommandResult(OperationResult result)
         {
             return new ApiResult()
             {
-                IsSuccess = result.Status == UseCaseStatus.Success,
+                IsSuccess = result.Status == OperationResultStatus.Success,
                 MetaData = new()
                 {
                     Message = result.Message,
@@ -28,9 +22,9 @@ namespace Common.EndPoint.API
             };
         }
 
-        protected ApiResult<TData?> CommandResult<TData>(UseCaseResult<TData> result, HttpStatusCode statusCode = HttpStatusCode.OK, string locationUrl = null)
+        protected ApiResult<TData?> CommandResult<TData>(OperationResult<TData> result, HttpStatusCode statusCode = HttpStatusCode.OK, string locationUrl = null)
         {
-            bool isSuccess = result.Status == UseCaseStatus.Success;
+            bool isSuccess = result.Status == OperationResultStatus.Success;
 
             if (isSuccess)
             {
@@ -68,17 +62,17 @@ namespace Common.EndPoint.API
     }
     public static class EnumHelper
     {
-        public static AppStatusCode MapOperationStatus(this UseCaseStatus status)
+        public static AppStatusCode MapOperationStatus(this OperationResultStatus status)
         {
             switch (status)
             {
-                case UseCaseStatus.Success:
+                case OperationResultStatus.Success:
                     return AppStatusCode.Success;
 
-                case UseCaseStatus.NotFound:
+                case OperationResultStatus.NotFound:
                     return AppStatusCode.NotFound;
 
-                case UseCaseStatus.Error:
+                case OperationResultStatus.Error:
                     return AppStatusCode.Error;
 
             }

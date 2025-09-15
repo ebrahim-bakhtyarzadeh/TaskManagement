@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using TaskManagement.Domain.Models.TasksAgg.Constants;
 
-namespace TaskManagement.Application.Tasks.Commands.Common
+namespace TaskManagement.Application.Tasks.Commands._Common
 {
 	 public class TaskCommandValidator : AbstractValidator<TaskCommand>
 	 {

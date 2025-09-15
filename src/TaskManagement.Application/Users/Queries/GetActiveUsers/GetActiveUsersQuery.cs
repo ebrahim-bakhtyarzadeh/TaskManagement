@@ -14,9 +14,9 @@ namespace TaskManagement.Application.Users.Queries.GetActiveUsers
 
     public class GetActiveUserQueryHandler : IRequestHandler<GetActiveUsersQuery, QueryResult<List<UserDto>>>
     {
-        private readonly IUserService _userService;
+        private readonly IUserQueryService _userService;
 
-        public GetActiveUserQueryHandler(IUserService userService)
+        public GetActiveUserQueryHandler(IUserQueryService userService)
         {
             _userService = userService;
         }

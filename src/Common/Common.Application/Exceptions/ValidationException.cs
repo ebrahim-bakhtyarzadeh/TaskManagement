@@ -1,4 +1,4 @@
-﻿namespace Application.Common.Exceptions
+﻿namespace Common.Application.Exceptions
 {
 	 public class ValidationException(string message = "خطای اعتبار سنجی") : Exception(message);
 	 public class NotFoundException(string message = "داده ای یافت نشد") : Exception(message);

@@ -32,6 +32,6 @@ namespace Common.Application.Result
     }
 
 
-
+        
     
 }

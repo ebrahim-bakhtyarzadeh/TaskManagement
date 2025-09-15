@@ -1,4 +1,4 @@
-﻿namespace TaskManagement.Application.Tasks.Commands.Common
+﻿namespace TaskManagement.Application.Tasks.Commands._Common
 {
 	 public class TaskCommand
 	 {

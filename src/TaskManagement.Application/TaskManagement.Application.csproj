@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Tasks\Queries\" />
+    <Folder Include="Tasks\Queries\NewFolder\" />
   </ItemGroup>
 
 </Project>

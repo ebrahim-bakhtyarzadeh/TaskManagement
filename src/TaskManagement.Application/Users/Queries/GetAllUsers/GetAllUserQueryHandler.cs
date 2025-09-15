@@ -7,8 +7,8 @@ namespace TaskManagement.Application.Users.Queries.GetAllUsers
 {
     internal class GetAllUserQueryHandler : IRequestHandler<GetAllUserQuery, QueryResult<List<UserDto>>>
     {
-        private readonly IUserService _userService;
-        public GetAllUserQueryHandler(IUserService userService)
+        private readonly IUserQueryService _userService;
+        public GetAllUserQueryHandler(IUserQueryService userService)
         {
             _userService = userService;
         }

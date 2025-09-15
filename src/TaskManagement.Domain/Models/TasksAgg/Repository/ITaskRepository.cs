@@ -3,7 +3,7 @@ using TaskManagement.Domain.Models.TasksAgg.Models;
 
 namespace TaskManagement.Domain.Models.TasksAgg.Repository
 {
-	 public interface ITaskRepository : IBaseRepository<WorkItem>
+	 public interface ITaskRepository : IBaseRepository<Tasks>
 	 {
 	 }
 }
