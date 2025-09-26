@@ -1,4 +1,4 @@
-﻿using TaskManagement.Domain.Models.TasksAgg.Models;
+﻿using TaskManagement.Domain.TasksAgg.Models;
 
 namespace TaskManagement.Application.Tasks.Commands.CheckListItems.Common
 {

@@ -1,6 +1,6 @@
 ﻿using Common.Application.Result;
 using MediatR;
-using TaskManagement.Domain.Models.TasksAgg.Repository;
+using TaskManagement.Domain.TasksAgg.Repository;
 
 namespace TaskManagement.Application.Tasks.Commands.CheckListItems.Delete
 {

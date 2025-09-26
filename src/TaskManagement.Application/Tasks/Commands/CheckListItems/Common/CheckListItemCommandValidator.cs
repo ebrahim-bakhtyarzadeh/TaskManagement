@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TaskManagement.Domain.Models.TasksAgg.Constants;
+using TaskManagement.Domain.TasksAgg.Constants;
 
 namespace TaskManagement.Application.Tasks.Commands.CheckListItems.Common
 {
@@ -7,12 +7,12 @@ namespace TaskManagement.Application.Tasks.Commands.CheckListItems.Common
 	 {
 		  public CheckListItemCommandValidator()
 		  {
-			   RuleFor(c => c.ItemName).NotEmpty().WithMessage("نام ایتم را حتما ثبت کنید").Length(TaskConstant.Task.MinNameLength, TaskConstant.Task.MaxNameLength)
-				.WithMessage($"نام ایتم باید بین {TaskConstant.Task.MinNameLength} و {TaskConstant.Task.MaxNameLength} باشد");
+			   RuleFor(c => c.ItemName).NotEmpty().WithMessage("نام ایتم را حتما ثبت کنید").Length(Constants.Task.MinNameLength, Constants.Task.MaxNameLength)
+				.WithMessage($"نام ایتم باید بین {Constants.Task.MinNameLength} و {Constants.Task.MaxNameLength} باشد");
 
 			   RuleFor(c => c.ItemDescription).NotEmpty().WithMessage("توضیحات ایتم را وارد کنید")
-					.Length(TaskConstant.Task.MinDescriptionLength, TaskConstant.Task.MaxDescriptionLength)
-				 .WithMessage($"توضیحات ایتم باید بین {TaskConstant.Task.MinDescriptionLength} و {TaskConstant.Task.MaxDescriptionLength} باشد"); ;
+					.Length(Constants.Task.MinDescriptionLength, Constants.Task.MaxDescriptionLength)
+				 .WithMessage($"توضیحات ایتم باید بین {Constants.Task.MinDescriptionLength} و {Constants.Task.MaxDescriptionLength} باشد"); ;
 		  }
 	 }
 }

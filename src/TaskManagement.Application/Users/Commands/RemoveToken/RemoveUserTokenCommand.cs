@@ -1,6 +1,6 @@
 ﻿using Common.Application.Result;
 using MediatR;
-using TaskManagement.Domain.Models.UsersAgg.Repository;
+using TaskManagement.Domain.UsersAgg.Repository;
 
 namespace TaskManagement.Application.Users.Commands.RemoveToken
 {

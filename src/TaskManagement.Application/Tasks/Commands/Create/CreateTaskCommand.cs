@@ -2,9 +2,8 @@
 using Common.Application.Result;
 using MediatR;
 using TaskManagement.Application.Tasks.Commands._Common;
-using TaskManagement.Domain.Models.TasksAgg.Factories;
-using TaskManagement.Domain.Models.TasksAgg.Models;
-using TaskManagement.Domain.Models.TasksAgg.Repository;
+using TaskManagement.Domain.TasksAgg.Factories;
+using TaskManagement.Domain.TasksAgg.Repository;
 namespace TaskManagement.Application.Tasks.Commands.Create
 {
     public class CreateTaskCommand : TaskCommand, IRequest<OperationResult>
@@ -26,22 +25,22 @@ namespace TaskManagement.Application.Tasks.Commands.Create
             {
                 try
                 {
-                    Domain.Models.TasksAgg.Models.Tasks workItem;
+					 Domain.TasksAgg.Models.Tasks workItem;
 
                     // به دلیل وجود داشتن else if مشکلی در تکرار ذخیره سازی وظیفه ایجاد نخواهد شد
                     if (request.StartTime == TaskStartTimes.ForNow)
                     {
-                        workItem = _taskFactory.CreateTaskForNow(request.Name, request.Description);
+                        workItem = _taskFactory.CreateTaskForNow(request.userId,request.Name, request.Description);
                         _taskRepository.Add(workItem);
                     }
                     else if (request.StartTime == TaskStartTimes.ForTommorow)
                     {
-                        workItem = _taskFactory.CreateTaskForTomorrow(request.Name, request.Description);
+                        workItem = _taskFactory.CreateTaskForTomorrow(request.userId, request.Name, request.Description);
                         _taskRepository.Add(workItem);
                     }
                     else if (request.StartTime == TaskStartTimes.ForNextWeek)
                     {
-                        workItem = _taskFactory.CreateTaskForNextWeek(request.Name, request.Description);
+                        workItem = _taskFactory.CreateTaskForNextWeek(request.userId, request.Name, request.Description);
                         _taskRepository.Add(workItem);
                         
                     }

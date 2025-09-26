@@ -1,7 +1,7 @@
 ﻿using Common.Application.Result;
 using MediatR;
 using TaskManagement.Application.Tasks.Commands._Common;
-using TaskManagement.Domain.Models.TasksAgg.Repository;
+using TaskManagement.Domain.TasksAgg.Repository;
 
 namespace TaskManagement.Application.Tasks.Commands.Edit
 {

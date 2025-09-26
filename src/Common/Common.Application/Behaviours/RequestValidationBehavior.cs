@@ -1,6 +1,7 @@
 ﻿using Common.Application.Exceptions;
 using FluentValidation;
 using MediatR;
+using System.Text;
 
 public class RequestValidationBehavior<TRequest, TResponse>
 	: IPipelineBehavior<TRequest, TResponse>
@@ -11,7 +12,7 @@ public class RequestValidationBehavior<TRequest, TResponse>
 	 public RequestValidationBehavior(IEnumerable<IValidator<TRequest>> validators)
 		 => this.validators = validators;
 
-	 public Task<TResponse> Handle(
+	 public async Task<TResponse> Handle(
 		 TRequest request,
 		 RequestHandlerDelegate<TResponse> next,
 		 CancellationToken cancellationToken)
@@ -24,11 +25,18 @@ public class RequestValidationBehavior<TRequest, TResponse>
 			  .Where(f => f != null)
 			  .ToList();
 
-		  if (errors.Count != 0)
+		  if (errors.Any())
 		  {
-			   throw new ModelValidationException(errors);
-		  }
+			   var errorBuilder = new StringBuilder();
 
-		  return next();
+			   foreach (var error in errors)
+			   {
+					errorBuilder.AppendLine(error.ErrorMessage);
+			   }
+
+			   throw new InvalidCommandException(errorBuilder.ToString(), null);
+		  }
+		  var response = await next();
+		  return response;
 	 }
 }

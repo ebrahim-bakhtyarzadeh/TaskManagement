@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TaskManagement.Application.Users.Queries.DTOs;
-using TaskManagement.Domain.Models.UsersAgg.Repository;
 
 namespace TaskManagement.Application.Users.Queries.GetById
 {

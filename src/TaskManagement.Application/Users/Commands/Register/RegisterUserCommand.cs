@@ -2,9 +2,9 @@
 using Common.Application.SecurityUtil;
 using MediatR;
 using TaskManagement.Application.Users.Commands.Common;
-using TaskManagement.Domain.Models.UsersAgg.Models;
-using TaskManagement.Domain.Models.UsersAgg.Repository;
-using TaskManagement.Domain.Models.UsersAgg.Services;
+using TaskManagement.Domain.UsersAgg.Models;
+using TaskManagement.Domain.UsersAgg.Repository;
+using TaskManagement.Domain.UsersAgg.Services;
 
 namespace TaskManagement.Application.Users.Commands.Register
 {

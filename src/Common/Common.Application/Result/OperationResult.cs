@@ -147,7 +147,8 @@
             {
                 Status = OperationResultStatus.Success,
                 Message = SuccessMessage,
-                Data = data,
+                Data = data, 
+                 IsSuccess = true
             };
         }
 
