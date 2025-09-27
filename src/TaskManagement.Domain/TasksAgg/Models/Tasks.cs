@@ -86,12 +86,12 @@ namespace TaskManagement.Domain.TasksAgg.Models
 			   {
 					Status = TaskStatus.NotStarted;
 			   }
-			   if (Items?.Count < 0 && Items.Any(c => c.IsCompleted == false) == false)
+			   else if (Items?.Count > 0 && Items.Any(c => c.IsCompleted == false))
 			   {
 					Status = TaskStatus.InProgress;
 
 			   }
-			   if (Items?.Count > 0 && Items.Any(c => c.IsCompleted == false) == true)
+			   else if (Items?.Count > 0 && Items.Any(c => c.IsCompleted == false) == true)
 			   {
 					Status = TaskStatus.Completed;
 

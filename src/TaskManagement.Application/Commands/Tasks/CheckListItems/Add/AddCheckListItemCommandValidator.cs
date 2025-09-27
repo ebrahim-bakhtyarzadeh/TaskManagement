@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TaskManagement.Application.Tasks.Commands.CheckListItems.Common;
+using TaskManagement.Application.Commands.Tasks.CheckListItems.Common;
 
 namespace TaskManagement.Application.Commands.Tasks.CheckListItems.Add
 {

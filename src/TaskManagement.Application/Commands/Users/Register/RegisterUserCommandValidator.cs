@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TaskManagement.Application.Users.Commands.Common;
+using TaskManagement.Application.Commands.Users.Common;
 
 namespace TaskManagement.Application.Commands.Users.Register
 {

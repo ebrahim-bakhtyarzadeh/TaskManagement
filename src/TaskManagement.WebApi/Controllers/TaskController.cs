@@ -9,8 +9,8 @@ using TaskManagement.Application.Commands.Tasks.CheckListItems.Edit;
 using TaskManagement.Application.Commands.Tasks.Create;
 using TaskManagement.Application.Commands.Tasks.Edit;
 using TaskManagement.Application.Queries.Tasks.DTOs;
+using TaskManagement.Application.Queries.Tasks.GetAllTasks;
 using TaskManagement.Application.Queries.Tasks.GetTasksByStatus;
-using TaskManagement.Application.Tasks.Queries.GetAllTasks;
 using TaskManagement.WebApi.Security;
 
 namespace TaskManagement.WebApi.Controllers

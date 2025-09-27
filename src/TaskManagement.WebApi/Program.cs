@@ -34,8 +34,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddJwtAuthentication(builder.Configuration);
 string dbConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-string esConnectionString = builder.Configuration["EventStore:ConnectionString"];
-builder.Services.Init(dbConnectionString, esConnectionString);
+builder.Services.Init(dbConnectionString);
 ApplicationConfiguration.RegisterApplicationDependencies(builder.Services);
 builder.Services.AddTransient<CustomJwtValidation>();
 var app = builder.Build();

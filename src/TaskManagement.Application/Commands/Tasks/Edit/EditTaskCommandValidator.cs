@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TaskManagement.Application.Tasks.Commands._Common;
+using TaskManagement.Application.Commands.Tasks._Common;
 
 namespace TaskManagement.Application.Commands.Tasks.Edit
 {

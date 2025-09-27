@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 using TaskManagement.Application.Queries.UserReports.DTOs;
 using TaskManagement.Application.Queries.UserReports.Shared;
 
@@ -17,14 +13,30 @@ namespace TaskManagement.Infrastructure.EF.Persistent.Ef.UserDataAccess.UserRepo
 			_Context = context;
 		}
 
-		public Task<List<CompletedTasks>> GetCompletedTasksReport(Guid userId)
+		public async Task<List<CompletedTaskInfo>> GetCompletedTasksReport(Guid userId)
 		{
-			throw new NotImplementedException();
+			  return await _Context.Tasks.Include(c => c.Owner).Include(c => c.Items).Where(c => c.UserId == userId && c.Status == Domain.TasksAgg.Models.TaskStatus.Completed).Select(c => new CompletedTaskInfo
+			   {
+					FullName = c.Owner.FirstName + " " + c.Owner.LastName,
+					UserId = c.UserId,
+				  	CheckListItemCount= c.Items.Count(),
+					TaskId= c.Id,
+					TaskName= c.Name,
+					
+			   }).ToListAsync();
 		}
 
-		public Task<List<StartedTask>> GetStartedTaskReports(Guid userId)
+		public async Task<List<StartedTaskInfo>> GetStartedTaskReports(Guid userId)
 		{
-			throw new NotImplementedException();
-		}
+			   return await _Context.Tasks.Include(c => c.Owner).Include(c => c.Items).Where(c => c.UserId == userId && c.Status == Domain.TasksAgg.Models.TaskStatus.InProgress).Select(c => new StartedTaskInfo
+			   {
+					FullName = c.Owner.FirstName + " " + c.Owner.LastName,
+					UserId = c.UserId,
+					CheckListItemCount = c.Items.Count(),
+					TaskId = c.Id,
+					TaskName = c.Name,
+
+			   }).ToListAsync();
+		  }
 	}
 }

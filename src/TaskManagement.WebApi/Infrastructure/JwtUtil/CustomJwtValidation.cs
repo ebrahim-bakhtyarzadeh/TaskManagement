@@ -1,8 +1,9 @@
 ﻿using Common.EndPoint;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using TaskManagement.Application.Users.Queries.GetById;
-using TaskManagement.Application.Users.Queries.GetUserTokenByJwtToken;
+using TaskManagement.Application.Queries.Users.GetById;
+using TaskManagement.Application.Queries.Users.GetUserTokenByJwtToken;
+
 
 namespace TaskManagement.WebApi.Infrastructure.JwtUtil
 {

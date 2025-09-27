@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using TaskManagement.Application.Users.Queries.Shared;
+
 using TaskManagement.Domain.UsersAgg.Repository;
 
 namespace TaskManagement.Infrastructure.EF.Persistent.Ef.UserDataAccess

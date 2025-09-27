@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using TaskManagement.Application.Users.Commands.Common;
+using TaskManagement.Application.Commands.Users.Common;
 using TaskManagement.Domain.UsersAgg.Constants;
 
 namespace TaskManagement.Application.Commands.Users.EditUser

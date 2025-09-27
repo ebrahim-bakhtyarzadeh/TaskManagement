@@ -9,7 +9,7 @@ namespace TaskManagement.Application.Queries.UserReports.Shared
 {
   public  interface IUserReportsQueryService
     {
-        public Task<List<CompletedTasks>> GetCompletedTasksReport(Guid userId);
-        public Task<List<StartedTask>> GetStartedTaskReports(Guid userId);
+        public Task<List<CompletedTaskInfo>> GetCompletedTasksReport(Guid userId);
+        public Task<List<StartedTaskInfo>> GetStartedTaskReports(Guid userId);
 	}
 }
