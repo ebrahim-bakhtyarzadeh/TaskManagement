@@ -16,4 +16,8 @@
     <ProjectReference Include="..\TaskManagement.Domain\TaskManagement.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Queries\UserReports\GetStartedTasks\" />
+  </ItemGroup>
+
 </Project>

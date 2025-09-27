@@ -1,6 +1,5 @@
 ﻿using Common.Domain.Models;
-using TaskManagement.Domain.TasksAgg.Constants;
-using TaskManagement.Domain.TasksAgg.Events;
+
 using TaskManagement.Domain.UsersAgg.Models;
 
 namespace TaskManagement.Domain.TasksAgg.Models
@@ -73,12 +72,7 @@ namespace TaskManagement.Domain.TasksAgg.Models
 					throw new ArgumentException("ایتم مورد نظر یافت نشد");
 			   }
 			   CurrentItem.CheckListItemCompleted();
-			   RaiseEvent(new CheckListItemCompleted
-			   {
-					TaskId = this.Id,
-					UserId = this.UserId,
-					CheckListitemId = CurrentItem.Id
-			   });
+			 
 			   StatusChecker();
 
 			   return this;

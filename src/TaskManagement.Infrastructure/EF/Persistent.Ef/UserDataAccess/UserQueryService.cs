@@ -1,7 +1,7 @@
 ﻿using Common.Application.SecurityUtil;
 using Microsoft.EntityFrameworkCore;
-using TaskManagement.Application.Users.Queries.DTOs;
-using TaskManagement.Application.Users.Queries.Shared;
+using TaskManagement.Application.Queries.Users.DTOs;
+using TaskManagement.Application.Queries.Users.Shared;
 
 namespace TaskManagement.Infrastructure.EF.Persistent.Ef.UserDataAccess
 {

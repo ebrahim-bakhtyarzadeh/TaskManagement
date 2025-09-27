@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TaskManagement.Application.Tasks.Queries.DTOs;
-using TaskManagement.Application.Tasks.Queries.Shared;
+using TaskManagement.Application.Queries.Tasks.DTOs;
+using TaskManagement.Application.Queries.Tasks.Shared;
 
 namespace TaskManagement.Infrastructure.EF.Persistent.Ef.TaskDataAccess
 {

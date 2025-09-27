@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaskManagement.Application.Users.Commands;
-using TaskManagement.Application.Users.Queries.GetById;
+using TaskManagement.Application.Commands.Users;
+using TaskManagement.Application.Queries.Users.GetById;
 using TaskManagement.Domain.TasksAgg.Factories;
 using TaskManagement.Domain.UsersAgg.Services;
 

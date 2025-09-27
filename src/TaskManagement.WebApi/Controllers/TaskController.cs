@@ -2,15 +2,15 @@ using Common.EndPoint.API;
 using Common.EndPoint.API.Result;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using TaskManagement.Application.Tasks.Commands.CheckListItems.Add;
-using TaskManagement.Application.Tasks.Commands.CheckListItems.ChangeState;
-using TaskManagement.Application.Tasks.Commands.CheckListItems.Delete;
-using TaskManagement.Application.Tasks.Commands.CheckListItems.Edit;
-using TaskManagement.Application.Tasks.Commands.Create;
-using TaskManagement.Application.Tasks.Commands.Edit;
-using TaskManagement.Application.Tasks.Queries.DTOs;
+using TaskManagement.Application.Commands.Tasks.CheckListItems.Add;
+using TaskManagement.Application.Commands.Tasks.CheckListItems.ChangeState;
+using TaskManagement.Application.Commands.Tasks.CheckListItems.Delete;
+using TaskManagement.Application.Commands.Tasks.CheckListItems.Edit;
+using TaskManagement.Application.Commands.Tasks.Create;
+using TaskManagement.Application.Commands.Tasks.Edit;
+using TaskManagement.Application.Queries.Tasks.DTOs;
+using TaskManagement.Application.Queries.Tasks.GetTasksByStatus;
 using TaskManagement.Application.Tasks.Queries.GetAllTasks;
-using TaskManagement.Application.Tasks.Queries.GetTasksByStatus;
 using TaskManagement.WebApi.Security;
 
 namespace TaskManagement.WebApi.Controllers

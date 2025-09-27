@@ -1,6 +1,4 @@
 ﻿using Common.Domain.Models;
-using TaskManagement.Domain.TasksAgg.Events;
-
 namespace TaskManagement.Domain.TasksAgg.Models
 {
 	 public class CheckListItem : Entity

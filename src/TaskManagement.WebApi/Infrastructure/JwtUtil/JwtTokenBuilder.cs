@@ -3,7 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
 using System.Text;
-using TaskManagement.Application.Users.Queries.DTOs;
+using TaskManagement.Application.Queries.Users.DTOs;
 
 namespace TaskManagement.WebApi.Infrastructure.JwtUtil
 {
